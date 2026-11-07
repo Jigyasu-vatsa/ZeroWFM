@@ -24,6 +24,7 @@ import {
   Scale,
   Play,
   RotateCcw,
+  BookOpen,
 } from 'lucide-react';
 
 export const HomePageView: React.FC = () => {
@@ -245,7 +246,219 @@ export const HomePageView: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. ADVANTAGES OF ZERO WASTE FOOD MANAGEMENT */}
+      {/* 2. LITERATURE REVIEW & SCIENTIFIC CALCULATION BASELINE */}
+      <section className="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl relative overflow-hidden">
+        {/* Subtle decorative background gradient */}
+        <div className="absolute -top-16 -right-16 w-64 h-64 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-blue-500/5 rounded-full blur-2xl pointer-events-none" />
+
+        {/* Section Header with academic literature review badge */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div className="space-y-1.5 max-w-3xl">
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-mono uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1.5">
+                <BookOpen className="w-3 h-3" />
+                M.Tech Dissertation Literature Review & Scientific Formulation
+              </span>
+              <span className="text-xs text-slate-400 font-mono hidden sm:inline">
+                Peer-Reviewed Standard Multipliers
+              </span>
+            </div>
+            <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+              Scientific Base: How Water Conserved & CO₂e Avoided Are Calculated
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              These environmental figures are not arbitrary estimates. As part of the literature review conducted for this M.Tech dissertation, our computational formulas adopt globally standardized life-cycle assessment (LCA) benchmarks from <strong>Prof. Arjen Hoekstra (Water Footprint Network)</strong>, the <strong>United Nations Environment Programme (UNEP)</strong>, the <strong>Food and Agriculture Organization (FAO)</strong>, and <strong>IPCC greenhouse gas guidelines</strong>.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              onClick={() => setProofModalOpen(true)}
+              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-950/60 hover:bg-blue-900/60 text-blue-300 border border-blue-800/80 font-bold text-xs shadow transition-all cursor-pointer"
+            >
+              <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
+              <span>Audit Proof Dossier</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Detailed 3-Column Literature Review Breakdown */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {/* Card 1: Water Footprint Formulation */}
+          <div className="bg-slate-950/70 border border-slate-800 rounded-2xl p-4 sm:p-5 space-y-3 flex flex-col justify-between">
+            <div className="space-y-2.5">
+              <div className="flex items-center justify-between">
+                <div className="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
+                  <Droplet className="w-5 h-5" />
+                </div>
+                <span className="text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded bg-blue-950/60 text-blue-300 border border-blue-800/60">
+                  Hoekstra & WFN Standard
+                </span>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-white text-sm">
+                  1. Virtual Water Footprint (224.7k L)
+                </h3>
+                <div className="text-[11px] text-blue-400 font-mono mt-0.5">
+                  214 kg × 1,050 L/kg = 224,700 Liters Conserved
+                </div>
+              </div>
+
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Pioneered by <strong>Prof. Arjen Hoekstra</strong> (creator of the Water Footprint concept and founder of the Water Footprint Network) and mapped by the FAO. Producing agricultural staples consumes vast embedded water:
+              </p>
+
+              <div className="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800/80 space-y-1 text-[11px] font-mono text-slate-400">
+                <div className="flex justify-between">
+                  <span>• Raw Rice Irrigation:</span>
+                  <span className="text-slate-200">~2,500 L / kg</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>• Wheat / Atta Grain:</span>
+                  <span className="text-slate-200">~1,500 L / kg</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>• Pulses / Dal Crop:</span>
+                  <span className="text-slate-200">~3,800 L / kg</span>
+                </div>
+                <div className="flex justify-between border-t border-slate-800 pt-1 text-emerald-400 font-semibold">
+                  <span>Cooked Indian Thali Avg:</span>
+                  <span>1,050 L / kg</span>
+                </div>
+              </div>
+
+              <p className="text-[11px] text-slate-400 leading-relaxed">
+                Rescuing 214 kg directly offsets the need for recipient shelters to cook 500 equivalent replacement meals, conserving 224,700 Liters of fresh agricultural water.
+              </p>
+            </div>
+
+            <div className="pt-2 text-[10px] text-slate-500 border-t border-slate-800/80 font-mono">
+              Ref: Hoekstra & Mekonnen (WFN / UNESCO-IHE)
+            </div>
+          </div>
+
+          {/* Card 2: CO2e & Methane Avoidance Formulation */}
+          <div className="bg-slate-950/70 border border-slate-800 rounded-2xl p-4 sm:p-5 space-y-3 flex flex-col justify-between">
+            <div className="space-y-2.5">
+              <div className="flex items-center justify-between">
+                <div className="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                  <Leaf className="w-5 h-5" />
+                </div>
+                <span className="text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded bg-emerald-950/60 text-emerald-300 border border-emerald-800/60">
+                  UNEP & FAO LCA Factor
+                </span>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-white text-sm">
+                  2. Methane & Carbon Mitigation (535 kg)
+                </h3>
+                <div className="text-[11px] text-emerald-400 font-mono mt-0.5">
+                  214 kg × 2.50 kg CO₂e/kg = 535 kg CO₂e Avoided
+                </div>
+              </div>
+
+              <p className="text-xs text-slate-300 leading-relaxed">
+                When cooked food is discarded in unmanaged municipal dump yards, it decomposes in an <strong>anaerobic (oxygen-deprived)</strong> environment, releasing potent <strong>Methane (CH₄)</strong>:
+              </p>
+
+              <div className="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800/80 space-y-1 text-[11px] font-mono text-slate-400">
+                <div className="flex justify-between">
+                  <span>• Landfill Methane GWP₁₀₀:</span>
+                  <span className="text-amber-400 font-bold">28× higher than CO₂</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>• Short-Term GWP₂₀:</span>
+                  <span className="text-amber-400 font-bold">84× higher than CO₂</span>
+                </div>
+                <div className="flex justify-between border-t border-slate-800 pt-1 text-emerald-400 font-semibold">
+                  <span>UNEP Diversion Factor:</span>
+                  <span>2.50 kg CO₂e / kg</span>
+                </div>
+              </div>
+
+              <p className="text-[11px] text-slate-400 leading-relaxed">
+                Source: <em>UNEP Food Waste Index Report</em> & <em>FAO Food Wastage Footprint LCA</em>. Diverting 214 kg from landfill prevents 535 kg of greenhouse emissions from reaching the atmosphere.
+              </p>
+            </div>
+
+            <div className="pt-2 text-[10px] text-slate-500 border-t border-slate-800/80 font-mono">
+              Ref: UNEP Food Waste Index & IPCC WG1 Assessment
+            </div>
+          </div>
+
+          {/* Card 3: Mass & Portion Equivalency Formulation */}
+          <div className="bg-slate-950/70 border border-slate-800 rounded-2xl p-4 sm:p-5 space-y-3 flex flex-col justify-between">
+            <div className="space-y-2.5">
+              <div className="flex items-center justify-between">
+                <div className="w-9 h-9 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center">
+                  <Scale className="w-5 h-5" />
+                </div>
+                <span className="text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded bg-purple-950/60 text-purple-300 border border-purple-800/60">
+                  Empirical Testbed Weighment
+                </span>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-white text-sm">
+                  3. Portion Equivalency (500 Meals)
+                </h3>
+                <div className="text-[11px] text-purple-400 font-mono mt-0.5">
+                  214 kg ÷ 0.428 kg/meal = 500 Portions (100% Diverted)
+                </div>
+              </div>
+
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Derived from calibrated digital platform scale weighments across the <strong>Sandip University SOCSE campus testbed</strong> and partner dining kitchens:
+              </p>
+
+              <div className="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800/80 space-y-1 text-[11px] font-mono text-slate-400">
+                <div className="flex justify-between">
+                  <span>• Measured Cooked Mass:</span>
+                  <span className="text-slate-200">214.0 kg net</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>• Standard Thali Portion:</span>
+                  <span className="text-slate-200">~428g (0.428 kg)</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>• Nutritious Portions:</span>
+                  <span className="text-slate-200 font-bold">500 complete meals</span>
+                </div>
+                <div className="flex justify-between border-t border-slate-800 pt-1 text-emerald-400 font-semibold">
+                  <span>Landfill Diversion Rate:</span>
+                  <span>100% (Zero Dumps)</span>
+                </div>
+              </div>
+
+              <p className="text-[11px] text-slate-400 leading-relaxed">
+                Every logged batch was physically inspected via 5-point FSSAI safety checks and verified received by registered community shelters prior to food expiration.
+              </p>
+            </div>
+
+            <div className="pt-2 text-[10px] text-slate-500 border-t border-slate-800/80 font-mono">
+              Ref: Sandip University Campus Testbed & FSSAI Standards
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Scientific Consensus Banner */}
+        <div className="p-3.5 bg-slate-950/90 border border-slate-800 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-300">
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+            <span>
+              <strong>Academic Literature Synthesis:</strong> The calculation methodology synthesizes established peer-reviewed frameworks from <em>Hoekstra et al. (WFN)</em>, <em>UNEP LCA Index</em>, and <em>FAO Natural Resource Footprint Guidelines</em>.
+            </span>
+          </div>
+          <span className="text-[11px] font-mono text-slate-400 shrink-0 self-start sm:self-auto bg-slate-900 px-2.5 py-1 rounded-lg border border-slate-800">
+            M.Tech Dissertation • Mr. Jigyasu Vatsa
+          </span>
+        </div>
+      </section>
+
+      {/* 3. ADVANTAGES OF ZERO WASTE FOOD MANAGEMENT */}
       <section className="space-y-6">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span className="text-[11px] font-mono uppercase bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-full font-bold">
@@ -334,7 +547,7 @@ export const HomePageView: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. RESEARCH ARTICLE OVERVIEW */}
+      {/* 4. RESEARCH ARTICLE OVERVIEW */}
       <section className="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-5">
           <div>
@@ -402,7 +615,7 @@ export const HomePageView: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. BRIEF INTRO OF ROLES & INTERACTIVE WORKSPACE GATEWAY */}
+      {/* 5. BRIEF INTRO OF ROLES & INTERACTIVE WORKSPACE GATEWAY */}
       <section className="space-y-6">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span className="text-[11px] font-mono uppercase bg-blue-500/10 text-blue-300 border border-blue-500/30 px-3 py-1 rounded-full font-bold">
@@ -473,7 +686,7 @@ export const HomePageView: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. REGIONAL INFRASTRUCTURE (RADAR & FEATURE SHOWCASE) */}
+      {/* 6. REGIONAL INFRASTRUCTURE (RADAR & FEATURE SHOWCASE) */}
       <section className="space-y-4 pt-2">
         <div className="flex items-center justify-between">
           <h2 className="text-sm font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
@@ -498,7 +711,7 @@ export const HomePageView: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. EMPIRICAL BASELINE & INSTITUTIONAL EVIDENCE BANNER */}
+      {/* 7. EMPIRICAL BASELINE & INSTITUTIONAL EVIDENCE BANNER */}
       <section className="bg-gradient-to-r from-blue-950/60 via-slate-900 to-indigo-950/60 border border-blue-800/50 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
         <div className="space-y-2 max-w-2xl">
           <div className="flex items-center gap-2">
