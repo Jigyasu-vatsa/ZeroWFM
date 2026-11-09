@@ -275,22 +275,19 @@ export const JigsyHeader: React.FC = () => {
                       Zero Waste Food Management
                     </a>
 
-                    <div className="border-t my-1 w-full border-slate-800" />
-
                     <a
                       href="https://aifm.jigsy.in/"
                       className="w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors hover:bg-slate-800 hover:text-white"
                     >
-                      &bull; AI-Assisted Food Management
+                      AI-Assisted Food Management
                     </a>
 
                     <a
                       href="https://ctfm.jigsy.in/"
                       className="w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors hover:bg-slate-800 hover:text-white"
                     >
-                      &bull; Cyber Trusted Food Management
+                      Cyber Trusted Food Management
                     </a>
-                  </div>
                 </div>
               </div>
 
