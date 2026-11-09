@@ -232,7 +232,7 @@ export const JigsyHeader: React.FC = () => {
               </span>
             </div>
 
-            {/* Nav Links: Home, Services, Contact (scrolls down), About Developer */}
+            {/* Nav Links: Home, Nexus, Services, Contact (scrolls down), About Developer */}
             <div className="flex items-center gap-2.5 sm:gap-4 text-xs font-semibold text-slate-700 flex-nowrap shrink-0">
               <a
                 href="#top"
@@ -246,6 +246,53 @@ export const JigsyHeader: React.FC = () => {
               >
                 Home
               </a>
+
+              {/* Nexus (Hover-based dropdown with zero-gap trigger) */}
+              <div
+                className="relative group py-2"
+                onMouseEnter={() => setNexusDropdownOpen(true)}
+                onMouseLeave={() => setNexusDropdownOpen(false)}
+              >
+                  <span>Nexus</span>
+                  <ChevronDown className="w-3 h-3 opacity-60 transition-transform group-hover:rotate-180" />
+                
+                {nexusDropdownOpen && (
+                  <div
+                    className="absolute left-0 top-full pt-1 w-72 z-50 animate-fadeIn text-left whitespace-normal select-none"
+                    onMouseEnter={() => setNexusDropdownOpen(true)}
+                    onMouseLeave={() => setNexusDropdownOpen(false)}
+                  >
+                    <div
+                      className={`rounded-xl shadow-2xl p-2.5 border flex flex-col w-full whitespace-normal`}
+                    >
+                      <button
+                        type="button"
+                        onClick={() => handleNavClick('https://zerowfm.jigsy.in/')}
+                        className={`w-full block text-left px-3 py-1.5 rounded-lg text-xs font-bold whitespace-normal transition-colors `}
+                      >
+                        Zero Waste Food Management
+                      </button>
+                      <div className={`border-t my-1 w-full ${isLight ? 'border-slate-200' : 'border-slate-800'}`}></div>
+                      <button
+                        type="button"
+                        onClick={() => handleNavClick('https://aifm.jigsy.in/')}
+                        className={`w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors  `}
+                      >
+                        &bull; AI-Assisted Food Management
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => handleNavClick('https://ctfm.jigsy.in/')}
+                        className={`w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors `}
+                      >
+                        &bull; Cyber Trusted Food Management
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              
               <a
                 href="https://jigsy.in"
                 target="_blank"
