@@ -246,68 +246,80 @@ export const JigsyHeader: React.FC = () => {
               >
                 Home
               </a>
-
-              {/* Nexus (Hover-based dropdown with zero-gap trigger) */}
+            
+              {/* Nexus (Hover-based dropdown with stable flex trigger wrapper) */}
               <div
-                className="relative group py-2"
+                className="relative group py-2 cursor-pointer"
                 onMouseEnter={() => setNexusDropdownOpen(true)}
                 onMouseLeave={() => setNexusDropdownOpen(false)}
               >
+                <div className="flex items-center gap-1 text-slate-950 hover:text-rose-700 transition-colors">
                   <span>Nexus</span>
                   <ChevronDown className="w-3 h-3 opacity-60 transition-transform group-hover:rotate-180" />
+                </div>
                 
                 {nexusDropdownOpen && (
                   <div
                     className="absolute left-0 top-full pt-1 w-72 z-50 animate-fadeIn text-left whitespace-normal select-none"
-                    onMouseEnter={() => setNexusDropdownOpen(true)}
-                    onMouseLeave={() => setNexusDropdownOpen(false)}
                   >
                     <div
-                      className={`rounded-xl shadow-2xl p-2.5 border flex flex-col w-full whitespace-normal`}
+                      className={`rounded-xl shadow-2xl p-2.5 border flex flex-col w-full whitespace-normal ${
+                        isLight ? 'bg-white border-slate-200 text-slate-800' : 'bg-slate-900 border-slate-800 text-slate-200'
+                      }`}
                     >
                       <button
                         type="button"
                         onClick={() => handleNavClick('https://zerowfm.jigsy.in/')}
-                        className={`w-full block text-left px-3 py-1.5 rounded-lg text-xs font-bold whitespace-normal transition-colors `}
+                        className={`w-full block text-left px-3 py-1.5 rounded-lg text-xs font-bold whitespace-normal transition-colors ${
+                          isLight ? 'hover:bg-slate-100 text-slate-950' : 'hover:bg-slate-800 text-white'
+                        }`}
                       >
                         Zero Waste Food Management
                       </button>
+                      
                       <div className={`border-t my-1 w-full ${isLight ? 'border-slate-200' : 'border-slate-800'}`}></div>
+                      
                       <button
                         type="button"
                         onClick={() => handleNavClick('https://aifm.jigsy.in/')}
-                        className={`w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors  `}
+                        className={`w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors ${
+                          isLight ? 'hover:bg-slate-100 text-slate-700' : 'hover:bg-slate-800 text-slate-300'
+                        }`}
                       >
-                        &bull; AI-Assisted Food Management
+                        • AI-Assisted Food Management
                       </button>
+                      
                       <button
                         type="button"
                         onClick={() => handleNavClick('https://ctfm.jigsy.in/')}
-                        className={`w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors `}
+                        className={`w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors ${
+                          isLight ? 'hover:bg-slate-100 text-slate-700' : 'hover:bg-slate-800 text-slate-300'
+                        }`}
                       >
-                        &bull; Cyber Trusted Food Management
+                        • Cyber Trusted Food Management
                       </button>
                     </div>
                   </div>
                 )}
               </div>
-
-              
+            
               <a
                 href="https://jigsy.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-rose-700 transition-colors"
+                className="hover:text-rose-700 transition-colors text-slate-950"
               >
                 Services
               </a>
+              
               <a
                 href="#contact"
                 onClick={handleContactClick}
-                className="hover:text-rose-700 transition-colors cursor-pointer"
+                className="hover:text-rose-700 transition-colors cursor-pointer text-slate-950"
               >
                 Contact
               </a>
+              
               <a
                 href="https://jigyasu.jigsy.in"
                 target="_blank"
@@ -319,6 +331,7 @@ export const JigsyHeader: React.FC = () => {
                 <ExternalLink className="w-3 h-3" />
               </a>
             </div>
+
 
             {/* Compact Verified Impact Metrics Pill */}
             <div className="hidden xl:flex items-center gap-3 text-xs bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-lg font-mono">
