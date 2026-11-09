@@ -252,57 +252,6 @@ export const JigsyHeader: React.FC = () => {
                 rel="noopener noreferrer"
                 className="hover:text-rose-700 transition-colors"
               >
-
-              {/* Nexus (Hover-based dropdown with zero-gap trigger) */}
-              <div
-                className="relative group py-2"
-                onMouseEnter={() => setNexusDropdownOpen(true)}
-                onMouseLeave={() => setNexusDropdownOpen(false)}
-              >
-                {/* Trigger */}
-                <div className="flex items-center gap-1 cursor-pointer select-none text-slate-200 hover:text-white transition-colors">
-                  <span>Nexus</span>
-                  <ChevronDown className="w-3 h-3 opacity-60 transition-transform group-hover:rotate-180" />
-                </div>
-               
-                {nexusDropdownOpen && (
-                  <div
-                    className="absolute left-0 top-full pt-1 w-72 z-50 animate-fadeIn text-left whitespace-normal select-none"
-                    onMouseEnter={() => setNexusDropdownOpen(true)}
-                    onMouseLeave={() => setNexusDropdownOpen(false)}
-                  >
-                    {/* Dropdown Container (Dark Mode Styled) */}
-                    <div className="rounded-xl shadow-2xl p-2.5 border border-slate-800 bg-slate-900 text-slate-200 flex flex-col w-full whitespace-normal">
-                      <button
-                        type="button"
-                        onClick={() => handleNavClick('https://zerowfm.jigsy.in/')}
-                        className="w-full block text-left px-3 py-1.5 rounded-lg text-xs font-bold whitespace-normal transition-colors hover:bg-slate-800 hover:text-white"
-                      >
-                        Zero Waste Food Management
-                      </button>
-                      
-                      <div className="border-t my-1 w-full border-slate-800"></div>
-                      
-                      <button
-                        type="button"
-                        onClick={() => handleNavClick('https://aifm.jigsy.in/')}
-                        className="w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors hover:bg-slate-800 hover:text-white"
-                      >
-                        &bull; AI-Assisted Food Management
-                      </button>
-                      
-                      <button
-                        type="button"
-                        onClick={() => handleNavClick('https://ctfm.jigsy.in/')}
-                        className="w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors hover:bg-slate-800 hover:text-white"
-                      >
-                        &bull; Cyber Trusted Food Management
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-              
                 Services
               </a>
               <a
