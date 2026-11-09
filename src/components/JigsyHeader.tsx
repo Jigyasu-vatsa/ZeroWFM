@@ -252,6 +252,54 @@ export const JigsyHeader: React.FC = () => {
                 rel="noopener noreferrer"
                 className="hover:text-rose-700 transition-colors"
               >
+
+              {/* Nexus (Self-contained hover dropdown) */}
+              <div className="relative group py-2">
+                {/* Trigger */}
+                <div className="flex items-center gap-1 cursor-pointer select-none text-slate-700 hover:text-rose-700 transition-colors">
+                  <span>Nexus</span>
+                  <svg
+                    className="w-3 h-3 opacity-60 transition-transform group-hover:rotate-180"
+                     viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </div>
+
+                {/* Dropdown Menu */}
+                <div className="hidden group-hover:block absolute left-0 top-full pt-1 w-72 z-50 text-left whitespace-normal select-none">
+                  <div className="rounded-xl shadow-2xl p-2.5 border border-slate-800 bg-slate-900 text-slate-200 flex flex-col w-full whitespace-normal">
+                    <a
+                      href="https://zerowfm.jigsy.in/"
+                      className="w-full block text-left px-3 py-1.5 rounded-lg text-xs font-bold whitespace-normal transition-colors hover:bg-slate-800 hover:text-white"
+                    >
+                      Zero Waste Food Management
+                    </a>
+
+                    <div className="border-t my-1 w-full border-slate-800" />
+
+                    <a
+                      href="https://aifm.jigsy.in/"
+                      className="w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors hover:bg-slate-800 hover:text-white"
+                    >
+                      &bull; AI-Assisted Food Management
+                    </a>
+
+                    <a
+                      href="https://ctfm.jigsy.in/"
+                      className="w-full block text-left px-3 py-1.5 rounded-lg text-[11px] whitespace-normal transition-colors hover:bg-slate-800 hover:text-white"
+                    >
+                      &bull; Cyber Trusted Food Management
+                    </a>
+                  </div>
+                </div>
+              </div>
+                
                 Services
               </a>
               <a
