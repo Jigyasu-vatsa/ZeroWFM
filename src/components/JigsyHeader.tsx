@@ -246,12 +246,6 @@ export const JigsyHeader: React.FC = () => {
               >
                 Home
               </a>
-              <a
-                href="https://jigsy.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-rose-700 transition-colors"
-              >
 
               {/* Nexus (Self-contained hover dropdown) */}
               <div className="relative group py-2">
@@ -299,7 +293,13 @@ export const JigsyHeader: React.FC = () => {
                   </div>
                 </div>
               </div>
-                
+
+              <a
+                href="https://jigsy.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-rose-700 transition-colors"
+              >
                 Services
               </a>
               <a
