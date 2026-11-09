@@ -289,7 +289,7 @@ export const JigsyHeader: React.FC = () => {
                     >
                       Cyber Trusted Food Management
                     </a>
-                  
+                  </div>
                 </div>
               </div>
               
