@@ -193,7 +193,7 @@ export const JigsyHeader: React.FC = () => {
                 {subtitleIndex === 0 ? (
                   <span className="text-emerald-300 font-medium">जिज्ञासु ईक्षण ग्रंथि समृद्धि युक्ति</span>
                 ) : (
-                  <span className="text-amber-200 uppercase tracking-widest font-mono text-[10px] sm:text-xs">
+                  <span className="text-amber-200 tracking-widest font-mono text-[10px] sm:text-xs">
                     JIGYASU INTEGRATED GLOBAL SERVICES with YOU
                   </span>
                 )}
